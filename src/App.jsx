@@ -19,6 +19,7 @@ import Campaign from "./Pages/Campaign";
 import Template from "./Pages/Template";
 import NotFound from "./pages/NotFound";
 import CreateBusiness from "./Pages/CreateBusiness";
+import IdeaPage from "./Pages/Ideapage";
 
 // PrivateRoute wrapper
 const PrivateRoute = ({ children }) => {
@@ -73,6 +74,8 @@ function App() {
             path="businesses/:businessId/templates"
             element={<Template />}
           />
+          <Route path="businesses/:businessId/ideas" element={<IdeaPage />} />
+
         </Route>
 
         {/* Catch-all */}

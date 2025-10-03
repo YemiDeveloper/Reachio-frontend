@@ -53,7 +53,7 @@ export default function Dashboard() {
         </div>
         <main className="p-6 overflow-auto">
           {/* Pass selectedBusiness and setSelectedBusiness to all nested routes */}
-          <Outlet context={{ selectedBusiness, setSelectedBusiness }} />
+          <Outlet context={{ selectedBusiness, setSelectedBusiness, user }} />
         </main>
       </div>
     </div>

@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { MdLightbulb } from "react-icons/md";
+
 import {
   FiHome,
   FiUsers,
@@ -267,6 +269,14 @@ export default function Sidebar() {
     <FiMail />
     {!collapsed && <span>Messages</span>}
   </Link>
+  <Link to={`/dashboard/businesses/${businessId}/ideas`} className={`flex items-center ${
+      collapsed ? "justify-center" : "justify-start"
+    } gap-3 px-3 md:px-5 py-3 rounded-xl font-semibold italic text-white hover:bg-white hover:text-purple-600 transition-all duration-300`}
+  >
+
+  <MdLightbulb size={18} />
+  {!collapsed && <span>Ideas / Notes</span>}
+</Link>
 </nav>
 
 
