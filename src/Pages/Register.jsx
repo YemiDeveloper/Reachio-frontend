@@ -44,7 +44,7 @@ const Register = () => {
     setTimeout(() => navigate("/login"), 2000);
   } catch (err) {
     setLoading(false);
-    setServerError(err.response?.data?.error || "Something went wrong");
+    // setServerError(err.response?.data?.error || "Something went wrong");
   }
 };
 
