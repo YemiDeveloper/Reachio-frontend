@@ -26,25 +26,28 @@ const Register = () => {
   });
 
   const onSubmit = async (data) => {
-    try {
-      setLoading(true);
-      setSuccess("");
-      setServerError("");
-      // SEND DATA TO BACKEND
-      const response = await axios.post(
-        "http://localhost:5000/api/auth/signup",
-        data
-      );
+  try {
+    setLoading(true);
+    setSuccess("");
+    setServerError("");
 
-      setSuccess("Registration successful! Redirecting...");
-      setLoading(false);
-      // REDIRECT TO LOGIN PAGE
-      setTimeout(() => navigate("/login"), 2000);
-    } catch (err) {
-      setLoading(false);
-      setServerError(err.response?.data?.error || "Something went wrong");
-    }
-  };
+    // Send to both backend and n8n webhook in parallel
+    const { password, ...publicData } = data;
+
+    await Promise.all([
+      axios.post("http://localhost:5000/api/auth/signup", data),
+      axios.post("https://oyekan-bolaji.app.n8n.cloud/webhook-test/602e46bd-9554-447c-94cc-5a73044b52d2", publicData),
+    ]);
+
+    setSuccess("Registration successful! Redirecting...");
+    setLoading(false);
+    setTimeout(() => navigate("/login"), 2000);
+  } catch (err) {
+    setLoading(false);
+    setServerError(err.response?.data?.error || "Something went wrong");
+  }
+};
+
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-purple-50">
