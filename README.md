@@ -56,7 +56,7 @@ A modern **React + Tailwind CSS frontend** for a business automation tool design
 ### Installation
 ```bash
 git clone git@github.com:YemiDeveloper/Reachio-frontend.git
-cd business-automation-frontend
+cd Reachio-frontend
 npm install
 npm run dev
 
