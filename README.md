@@ -57,4 +57,4 @@ cd business-automation-frontend
 npm install
 npm run dev
 
-![Dashboard overview](https://github.com/YemiDeveloper/Reachio-frontend/blob/main/public/Screenshot%202025-10-21%20084234.png?raw=true)
+![Dashboard overview](https://raw.githubusercontent.com/YemiDeveloper/Reachio-frontend/main/public/Screenshot%202025-10-21%20084234.png)
