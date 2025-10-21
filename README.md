@@ -51,6 +51,8 @@ A modern **React + Tailwind CSS frontend** for a business automation tool design
 - Node.js >= 18
 - npm or yarn
 
+![Reachio Dashboard overview](https://raw.githubusercontent.com/YemiDeveloper/Reachio-frontend/main/public/Screenshot%202025-10-21%20084234.png)
+
 ### Installation
 ```bash
 git clone git@github.com:YemiDeveloper/Reachio-frontend.git
@@ -58,4 +60,4 @@ cd business-automation-frontend
 npm install
 npm run dev
 
-![Dashboard overview](https://raw.githubusercontent.com/YemiDeveloper/Reachio-frontend/main/public/Screenshot%202025-10-21%20084234.png)
+
