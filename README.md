@@ -35,8 +35,6 @@ A modern **React + Tailwind CSS frontend** for a business automation tool design
 - Recharts for visualizing stats
 
 ---
-![Test Image](https://via.placeholder.com/150)
-
 ## 🛠 Tech Stack
 - **Frontend:** React.js, Tailwind CSS
 - **Charts:** Recharts
